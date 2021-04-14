@@ -15,6 +15,8 @@ class CreateTodolistProject extends Migration
     {
         Schema::create('todolists', function (Blueprint $table) {
             $table->id();
+            $table->string('target');
+            $table->integer('status');
             $table->timestamps();
         });
     }
