@@ -10,7 +10,7 @@
             @csrf
             <div class="todolist position-absolute top-20 start-50 translate-middle row mb-5 mt-3 d-inline-flex">
                 <div class="mb-3 col-6">
-                    <input type="text" id="target" name="target" class="form-control">
+                    <input type="text" id="target" name="target" class="form-control" @if(limit()) disabled @endIf>
                 </div>
                 <div class="mb-3 col-2">
                     <button class="btn btn-primary">add</button>
