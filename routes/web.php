@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [TodoController::class, 'index']);
+Route::post('/tambah', [TodoController::class, 'tambah'])->name('tambah');
