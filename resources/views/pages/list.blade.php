@@ -12,13 +12,9 @@
                 <div class="mb-3 col-6">
                     <input type="text" id="target" name="target" class="form-control">
                 </div>
-                @if ()
-
-                @else
                 <div class="mb-3 col-2">
-                    <button class="btn btn-primary">add</button>
+                    <button class="btn btn-primary">add {{limit()}} </button>
                 </div>
-                @endif
             </div>
         </form>
         <div class="list position-absolute top-50 start-50 translate-middle d-inline-block">
