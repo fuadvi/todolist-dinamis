@@ -37,7 +37,7 @@ class TodoController extends Controller
     public function selesai($id)
     {
         $list = TodoList::findOrFail($id);
-        if (!$list) {
+        if ($list) {
             $list->status = 1;
             $list->save();
         }

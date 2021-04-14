@@ -23,7 +23,7 @@
             </div>
             <div class="list-group">
                 @forelse ($listTarget as $item)
-                    <a href="{{ $item->id }}" class="list-group-item list-group-item-action @if ($item->status == 1) text-miring @endif">{{ $item->target }}</a>
+                    <a href="{{ route('selesai',$item->id) }}" class="list-group-item list-group-item-action @if ($item->status == 1) text-miring @endif">{{ $item->target }}</a>
                 @empty
                 <P class="list-group-item list-group-item-action">Tidak Ada Target Yang di Inginkan Hari ini</P>
                 @endforelse

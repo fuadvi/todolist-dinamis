@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [TodoController::class, 'index']);
 Route::post('/tambah', [TodoController::class, 'tambah'])->name('tambah');
-Route::post('/selesai/{id}', [TodoController::class, 'selesai'])->name('selesai');
+Route::get('/selesai/{id}', [TodoController::class, 'selesai'])->name('selesai');
