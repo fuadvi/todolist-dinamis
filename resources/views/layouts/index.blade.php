@@ -14,6 +14,7 @@
         <div class="header my-5">
             <h1 class="display-2 text-center">Target Hari Ini <span class="text-danger">?</span></h1>
         </div>
+
         {{-- list todo --}}
         @yield('content')
     </div>

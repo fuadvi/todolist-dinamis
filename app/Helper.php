@@ -5,16 +5,5 @@ use App\Models\TodoList;
 
 function limit()
 {
-    echo TodoList::where('waktu', Carbon::today())->count() < 5;
-}
-
-function customTanggal($date, $date_format)
-{
-    return \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format($date_format);
-}
-
-
-function allUpper($str)
-{
-    return strtoupper($str);
+    return TodoList::where('waktu', Carbon::today())->count() == 5;
 }
