@@ -11,7 +11,7 @@ class TodoController extends Controller
 {
     public function index()
     {
-        $listTarget = TodoList::all();
+        $listTarget = TodoList::where('waktu', Carbon::today())->get();
         return view('pages.list')->with([
             'listTarget' => $listTarget, 'bar' => $this->ProgresBar()
         ]);
@@ -52,9 +52,11 @@ class TodoController extends Controller
     {
         $list = TodoList::where('status', 1)->where('waktu', Carbon::today())->get();
         $bar = 0;
+        $totalbar = 100 / (TodoList::where('waktu', Carbon::today())->count() ? TodoList::where('waktu', Carbon::today())->count() : 1);
         foreach ($list as  $value) {
-            $bar += 20;
+            $bar += $totalbar;
         }
+        // dd($bar);
         return $bar;
     }
 }
